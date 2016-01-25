@@ -30,3 +30,4 @@ Minimal webapp for storing own link list
 
 To view the list, head your browser to [localhost:5000](http://127.0.0.1:5000/).
 To add a link, open in browser [http://localhost:5000/http://file.domain/url](http://127.0.0.1:5000/http://file.domain/url).
+If you wish, you can create a bookmarklet. As destination enter `javascript:location.href='http://localhost:5000/'+location.href`
