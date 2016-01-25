@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Links DB</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Average+Sans&subset=latin,latin-ext);
+    @import url(https://fonts.googleapis.com/css?family=Cardo&subset=latin,latin-ext);
+    .link {
+        color: #85144b;
+        text-decoration: none;
+        font-family: 'Cardo', serif;
+    }
+    .link:hover {
+        background-color: #FFDC00;
+    }
+    ::selection {
+        background: #FFDC00;
+    }
+    ::-moz-selection {
+        background: #FFDC00;
+    }
+    .desc {
+        color: #3D9970;
+        font-family: 'Average Sans', sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <table style="width:100%">
+        {% for el in links %}
+            <tr>
+                <td class="desc">
+                    {{ fn_convert(el['timestamp']) }}
+                </td>
+                <td>
+                    <a href="{{ el['url'] }}" target="_blank" class="link">
+                        {{ el['title'] }}
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
