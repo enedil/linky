@@ -20,7 +20,7 @@
     ::-moz-selection {
         background: #FFDC00;
     }
-    .desc {
+    .date {
         color: #3D9970;
         font-family: 'Average Sans', sans-serif;
     }
@@ -30,7 +30,7 @@
     <table style="width:100%">
         {% for el in links %}
             <tr>
-                <td class="desc">
+                <td class="date">
                     {{ fn_convert(el['timestamp']) }}
                 </td>
                 <td>
