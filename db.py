@@ -7,9 +7,12 @@ import requests
 import tinydb
 
 def insert(url, path='db.json'):
-    resp = requests.get(url).text
+    resp = requests.get(url)
+    if not resp.ok:
+        return False
+    html = resp.text
     try:
-        title = resp.split('title>')[1][:-2]
+        title = html.split('title>')[1][:-2]
     except:
         title = url
     db = tinydb.TinyDB(path)
