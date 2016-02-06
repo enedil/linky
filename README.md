@@ -11,11 +11,11 @@ Minimal webapp for storing own link list
 
 ## get them on Ubuntu/Debian Linux:
 
-    sudo apt-get install tmux python3
+    sudo apt-get install tmux python3 python3-pip
     
 ## get them on Fedora Linux:
 
-    sudo dnf install tmux python3
+    sudo dnf install tmux python3 
 
 # installation
 
